@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "esp_timer.h": "c",
+        "esp_log.h": "c",
+        "event_groups.h": "c"
+    }
+}
