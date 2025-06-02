@@ -170,7 +170,7 @@ void SetUpPwm(
     CreatePwmCounter(0, 0, gpioNumber, 5, 400, 0, m_pwmCounterHandle, &m_PwmCounterCompleted, m_ledTimerConfig, m_ledChannelConfig);
     SetUpHelper(m_ledTimerConfig->duty_resolution);
     gpio_set_direction(gpioNumber, GPIO_MODE_INPUT_OUTPUT);
-   // gpio_matrix_out(gpioNumber, LEDC_LS_SIG_OUT0_IDX + m_ledChannelConfig->channel, 0, 0);
+   // gpio_matrix_out(gpioNumber, LEDC_LS_SIG_OUT0_IDX + m_ledChannelConfig->channel, 0, 0); //TODO: Check to see if its needed.
 }
 
 // this function runs and will monitor when the fade has ended will trigger the bits for the monitor function which in turn will trigger the bits of another eventgroup
