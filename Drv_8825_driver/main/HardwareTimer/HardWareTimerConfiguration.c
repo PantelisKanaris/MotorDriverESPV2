@@ -9,7 +9,7 @@
 #include <inttypes.h>
 
 static char *TAG = "Hard ware timer";
-#define TIMER_BASE_CLK 80000000  // 80 MHz APB clock
+#define TIMER_BASE_CLK 80000000  // 80 MHz APB clock //TODO: Check to see if this is correct.
 #define TIMER_DIVIDER (16) //this is the diver we have 80kz ticks and we divide by 16 
 #define TIMER_SCALE (TIMER_BASE_CLK / TIMER_DIVIDER) // convert counter value to seconds
 
