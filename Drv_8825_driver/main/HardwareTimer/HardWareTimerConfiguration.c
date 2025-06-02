@@ -6,6 +6,7 @@
 #include "esp_log.h"
 #include "freertos/timers.h"
 #include "driver/timer.h"
+#include <inttypes.h>
 
 static char *TAG = "Hard ware timer";
 #define TIMER_BASE_CLK 80000000  // 80 MHz APB clock
@@ -168,7 +169,7 @@ void CheckTimerStatus()
     if (errr == ESP_OK)
     {
         ESP_LOGI(TAG, "Timer Configuration:");
-        ESP_LOGI(TAG, "Divider: %d", config.divider);
+        ESP_LOGI(TAG, "Divider: %" PRIu32, config.divider);
         ESP_LOGI(TAG, "Counter Direction: %s", (config.counter_dir == TIMER_COUNT_UP) ? "Up" : "Down");
         ESP_LOGI(TAG, "Auto Reload: %s", (config.auto_reload) ? "Enabled" : "Disabled");
         ESP_LOGI(TAG, "Counter Enabled: %s", (config.counter_en == TIMER_PAUSE) ? "Paused" : "Running");
@@ -187,7 +188,7 @@ void CheckIfTimerIsRunning(int *last_timer_value, int *timerInterval)
 
     if (current_timer_value != *last_timer_value)
     {
-        ESP_LOGI(TAG, "Timer is running. Current value: %llu", current_timer_value);
+        ESP_LOGI(TAG, "Timer is running. Current value: %"PRIu64,current_timer_value);
         ESP_LOGI(TAG, "Timer is running.  value to reach: %d", *timerInterval * TIMER_SCALE);
     }
     else

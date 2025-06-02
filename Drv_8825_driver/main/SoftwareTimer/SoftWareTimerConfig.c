@@ -5,6 +5,7 @@
 #include "esp_log.h"
 #include "esp_attr.h"
 #include "esp_heap_caps.h"
+#include <inttypes.h>
 
 /// @brief This is the FreeRTOS softoware Timer with all of its limitation see the documentation for more details.
 TimerHandle_t m_Timer;
