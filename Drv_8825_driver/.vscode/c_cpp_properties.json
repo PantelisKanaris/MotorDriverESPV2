@@ -4,7 +4,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\Espressif\\frameworks\\esp-idf-v5.4.1\\components\\**"
+                "C:\\Espressif\\frameworks\\esp-idf-v5.5\\components\\**",
+                "C:\\Espressif\\frameworks\\esp-idf-v5.5\\components\\newlib\\platform_include\\**",
+                "C:/Espressif/frameworks/esp-idf-v5.5/components/newlib/platform_include"
             ],
             "defines": [
                 "_DEBUG",
@@ -12,7 +14,7 @@
                 "_UNICODE"
             ],
             "intelliSenseMode": "linux-gcc-x64",
-            "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc"
+            "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
         }
     ],
     "version": 4
